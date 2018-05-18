@@ -2,8 +2,8 @@ package ru.whalemare.bottomsheet
 
 import android.content.Context
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.GridLayoutManager
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
 import android.view.MenuItem
 import android.view.View
 import android.widget.CheckBox
@@ -51,7 +51,7 @@ open class MainActivityKotlin : AppCompatActivity() {
         SheetMenu(
                 titleId = if (needTitle) R.string.title else 0,
                 menu = R.menu.menu_long_icons,
-                layoutManager = GridLayoutManager(this, 3),
+                layoutManager = androidx.recyclerview.widget.GridLayoutManager(this, 3),
                 click = MenuItem.OnMenuItemClickListener {
                     toast("Click on ${it.title}")
                     true

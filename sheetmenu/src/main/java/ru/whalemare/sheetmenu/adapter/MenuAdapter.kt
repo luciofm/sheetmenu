@@ -1,7 +1,7 @@
 package ru.whalemare.sheetmenu.adapter
 
-import android.support.annotation.LayoutRes
-import android.support.v7.widget.RecyclerView
+import androidx.annotation.LayoutRes
+import androidx.recyclerview.widget.RecyclerView
 import android.view.*
 import android.widget.ImageView
 import android.widget.TextView
@@ -63,7 +63,7 @@ open class MenuAdapter(var menuItems: List<MenuItem> = emptyList(),
         return menuItems.size
     }
 
-    open class ViewHolder(itemView: View?) : RecyclerView.ViewHolder(itemView) {
+    open class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var imageIcon: ImageView = itemView?.findViewById(R.id.image_icon) as ImageView
         var textTitle: TextView = itemView?.findViewById(R.id.text_title) as TextView
     }
